@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>FoC — Fundamentals of Computing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+  *{
+	box-sizing: border-box;
+  }
+  
+  body {
+	font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  header {
+	background-color: #ba55d3;
+	padding: 30px;
+	text-align: center;
+	font-size: 35px;
+	color: white;
+  }
+  
+  nav {
+	float: left;
+  width: 30%;
+  height: 300px; 
+  background: #ccc;
+  padding: 20px;
+  }
+  
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; 
+}
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+  <header>
+    <h1>Fundamentals of Computing</h1>
+    <nav>
+      <ul>
+        <li><a href="course.html">Course</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="concept.html">Concepts</a></li>
+        <li><a href="databases.html">Databases</a></li>
+        <li><a href="documentation.html">Documentation</a></li>
+        <li><a href="devteam.html">Dev Team</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <figure>
+      <img src="FOC.png" alt= />
+    </figure>
+
+    <section aria-labelledby="course-desc-title">
+      <h2 id="course-desc-title">Course Description</h2>
+      <p>
+        This course is an introduction to the fundamentals of Computer Science that will provide
+        students with a foundation for future courses in Computer Science. The course is a broad
+        survey of the discipline through topics that allow students to understand the capabilities
+        of computer systems in terms of: the computer architecture; operating systems and computer
+        networks; software and software development; data organization and visualization; and the
+        potential of computing machines.
+      </p>
+    </section>
+
+    <section aria-labelledby="project-title">
+      <h2 id="project-title">Project</h2>
+      <p>
+        The final project will consist of 4 sections. Each section has a deadline to complete.
+        A complete description of the project can be found on the course Moodle site. It will
+        consist of launching a website built with HTML, CSS, and JavaScript and hosted on GitHub.
+        This site is a benchmark for the Final Project. See Project Specification on Moodle Site.
+      </p>
+      <ul>
+        <li><a href="https://kryanbz.github.io/FoC/notgate.html">Project 1: NOT Gate</a></li>
+        <li><a href="https://kryanbz.github.io/FoC/andgate.html">Project 2: AND Gate</a></li>
+        <li><a href="https://kryanbz.github.io/FoC/easyand.html">Project 2: AND Gate — easy version</a></li>
+        <li><a href="https://kryanbz.github.io/FoC/binarytohex.html">Project 3: Binary to Hexadecimal Converter</a></li>
+        <li><a href="https://kryanbz.github.io/FoC/ascii.html">Project 4: ASCII Converter</a></li>
+        <li><a href="https://kryanbz.github.io/FoC/unicode.html">Project 4: UNICODE Converter</a></li>
+        <li><a href="https://kryanbz.github.io/FoC/MLinstructions.html">Project 5: Machine Language Instructions Converter</a></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="concepts-title">
+      <h2 id="concepts-title">Concepts</h2>
+      <p>
+        Click on the Concepts image on the site to view the presentation, or use the recording link below.
+      </p>
+      <p>
+        <a href="https://kryanbz.github.io/FoC/concepts.html">Concepts Page</a> ·
+        <a href="https://drive.google.com" target="_blank" rel="noopener">Recording (Google Drive)</a>
+      </p>
+    </section>
+
+    <section aria-labelledby="databases-title">
+      <h2 id="databases-title">Databases</h2>
+      <p>
+        Visit the Databases page and click the image for the presentation.
+      </p>
+      <p><a href="https://kryanbz.github.io/FoC/database.html">Databases Page</a></p>
+    </section>
+
+    <section aria-labelledby="documentation-title">
+      <h2 id="documentation-title">Documentation</h2>
+      <p>
+        Visit the Documentation page and click the image for the presentation.
+      </p>
+      <p><a href="https://kryanbz.github.io/FoC/documentation.html">Documentation Page</a></p>
+    </section>
+
+    <section aria-labelledby="about-title">
+      <h2 id="about-title">About Me</h2>
+      <figure>
+        <img src="kieranryan.jpg" alt="" />
+        <figcaption>Kieran Ryan</figcaption>
+      </figure>
+      <p>
+        Kieran Ryan holds a PhD in Management Information Systems from KeimYung University in South Korea.
+        He completed an MBA at National Tsing Hua University in Taiwan, his undergraduate degree is in
+        Computer Science. He teaches Management Information Systems courses to the business students and
+        Fundamentals of Computing and Database courses at the University of Belize. Dr. Ryan currently
+        conducts research on information system success from a developing country perspective.
+      </p>
+      <p>
+        His service work is making programming classes available at all secondary schools in Belize.
+      </p>
+      <p><a href="https://kryanbz.github.io/FoC/aboutme.html">Dev Team / About Page</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>@ Powered by UB</p>
+  </footer>
+
+</body>
+</html>
