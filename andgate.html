@@ -2,52 +2,77 @@
 <html>
 <head>
     <title>AND</title>
-	<style>
-.button {
-  background-color: #008CBA; /* Blue */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-</style>
+    <style>
+        .button {
+          background-color: #008CBA;
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+
+        img {
+          width: 100px;
+          cursor: pointer;
+          user-select: none;
+        }
+    </style>
 </head>
 <body>
 
-<script src = "javascript.js"></script>
-<script> 
+    <button class="button" onclick="andGate()">Run</button>
 
-</script>
+    <table style="width:100%">
+      <tr>
+        <td>
+          <!-- Input toggles -->
+          <img src="toggle-off.png" id="toggleImage1" onclick="toggleInput(1)">
+          <br>
+          <img src="toggle-off.png" id="toggleImage2" onclick="toggleInput(2)">
+        </td>
 
- <button class="button" onclick = "and()">Run</button>
-<p>
+        <!-- AND gate output -->
+        <td>
+          <img id="andGateImage" src="and2off.png">
+        </td>
+      </tr>
+    </table>
 
-<table style="width:100%">
+    <a href="index.html">Back to Home</a>
 
-  <tr>
-    <td>
-	<img src="toggle-icon-12.jpg"  id="toggleImage" onclick="toggleImage(); toggleInputOne();"/>
-	<br>
-    <img src="toggle-icon-12.jpg"  id="toggleImage2" onclick="toggleImage2(); toggleInputTwo();"/> 
-</td>
-    <td><img id="andGate" src="and2off.PNG" ></td>
-  </tr>
+    <script>
+      // Track input states
+      let input1 = false;
+      let input2 = false;
 
-</table>
+      function toggleInput(num) {
+        if (num === 1) {
+          input1 = !input1;
+          document.getElementById("toggleImage1").src = input1 ? "toggle-on.png" : "toggle-off.png";
+        } else if (num === 2) {
+          input2 = !input2;
+          document.getElementById("toggleImage2").src = input2 ? "toggle-on.png" : "toggle-off.png";
+        }
 
-<a href="index.html">Back to Home</a></h3>
+        updateAndGate();
+      }
 
-</p>
+      function updateAndGate() {
+        const andOutput = input1 && input2;
+        document.getElementById("andGateImage").src = andOutput ? "and2on.png" : "and2off.png";
+      }
 
-
-
-
-
+      // Optional: separate "Run" button function
+      function andGate() {
+        updateAndGate();
+        alert(`AND output is ${input1 && input2 ? "ON" : "OFF"}`);
+      }
+    </script>
 
 </body>
 </html>
